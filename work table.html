@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<a href="practice page.html">
+<img src="images/back.png"width="20px"> 
+</a>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Table</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+body{
+background:#f1f5f9;
+}
+
+
+header{
+font-size:40px;
+text-transform:uppercase;
+background:teal;
+color:white;
+text-align:center;
+padding:15px;
+box-shadow:0 5px 10px gray;
+}
+
+section{
+width:95%;
+margin:auto;
+}
+
+
+table{
+margin-top:20px;
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+th{
+background:#0f172a;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+text-align:center;
+}
+
+
+tr:{
+background:#f8fafc;
+}
+
+tr:hover{
+cursor:pointer;
+background:#fde68a;
+transition:0.3s;
+}
+
+td:hover{
+background:#22c55e;
+color:white;
+}
+
+caption{
+font-size:22px;
+margin:10px;
+font-weight:bold;
+}
+
+
+@media(max-width:768px){
+table{
+font-size:12px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Student Marks Table
+</header>
+
+<section>
+
+<table border="1">
+
+<caption>Modern School</caption>
+
+<tr>
+<th>Roll No</th><th>Maths</th><th>English</th><th>Science</th><th>Hindi</th><th>Computer</th>
+
+</tr>
+
+<tr>
+<td>1.</td><td>Gauri</td><td>89</td><td>56</td><td>80</td><td>67</td>
+</tr>
+
+<tr>
+<td>2.</td><td>Kajal</td><td>79</td><td>67</td><td>79</td><td>68</td>
+</tr>
+
+<tr>
+<td>3.</td><td>Kuldeep</td><td>87</td><td>45</td><td>56</td><td>45</td>
+</tr>
+
+<tr>
+<td>4.</td><td>Pari</td><td>56</td><td>56</td><td>76</td><td>39</td>
+</tr>
+
+</table>
+
+</section>
+
+</body>
+</html>

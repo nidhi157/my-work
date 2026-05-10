@@ -1,0 +1,230 @@
+<!doctypehtml>
+
+<html>
+
+<head>
+
+
+<a href="practice page.html">
+<img src="images/back.png"width="20px"> 
+</a>
+
+
+
+<title>web gallery </title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+@keyframes zoomout
+{
+
+from{transform:scale(3);}
+to{transform:scale(1);}
+}
+
+
+/* tag style */
+
+
+
+header
+{
+width:50%;
+background:black;
+color:white;
+margin:auto;
+text-align:center; 
+font-size:70px;
+box-shadow:10px 10px 20px cyan;
+padding:20px;
+font-family:arial black;
+text-shadow:5px 5px 5px cyan;
+}
+
+body
+
+{
+background-image:url(images/bg.2.jpg);
+background-size:cover;
+animation:zoomout 1.50s ease-out;
+}
+.picstyle
+{
+width:17%;
+height:210px;
+border-radius:100px;
+box-shadow:5px 5px 10px cyan;
+margin:100px;
+text-align:centre;
+transition:0.50s;
+
+}
+//.picstyle:hover
+{
+transform:scale(1.50)rotate(360deg);
+border-radius:0px;
+}
+
+/* Extra small device (phones, 600px and down) */
+
+@media only screen and (max-width: 600px)
+
+{
+
+body {background:green; }
+
+header
+
+{
+
+//display:none;
+
+font-size:10px;
+height:10px;
+padding:5px;
+margin-bottom:10%;
+
+}
+
+main
+
+{
+
+text-align:center;
+
+}
+
+.picstyle
+
+{
+
+width:80%;
+height100px;
+margin:10px;
+border-radius:0px;
+
+}
+}
+
+/* small device (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px)
+
+{
+
+body{background:orange;}
+
+header{
+font-size:20px;
+}
+
+
+
+.picstyle
+
+{
+
+width:40%;
+height:150px;
+margin:10px;
+border-radius:100px;
+margin-left:40px;
+
+}
+
+
+/* medium device (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px)
+
+{
+
+body{background:yellow;}
+
+header{
+font-size:40px;
+}
+
+.picstyle
+
+{
+width:35%;
+height:350px;
+margin:45px;
+}
+}
+/*large device (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+
+{
+
+body{background:cyan;}
+
+header{
+font-size:50px;
+}
+
+.picstyle
+
+{
+width:17%;
+height:210px;
+border-radius:100px;
+box-shadow:5px 5px 10px magenta;
+margin:70px;
+transition:0.50s;
+}
+
+
+
+}
+
+
+
+
+
+</style>
+
+<body>
+<header> photo gallery </header>
+</body>
+<main>
+<a href="0.1.html">
+
+<img class="picstyle" src="images/01.jpg"alt="01.jpg image"title="click to zoom">
+</a>
+
+
+
+<a href="02.html">
+<img class="picstyle" src="images/02.jpg"alt="02.jpg image"title="click to zoom" width>
+</a>
+
+
+<a href="03.html">
+<img class="picstyle" src="images/03.jpg"alt="03.jpg image"title="click to zoom">
+</a>
+
+<a href="04.html">
+<img class="picstyle" src="images/04.jpg"alt="04.jpg image"title="click to zoom">
+</a>
+
+<a href="05.html">
+<img class="picstyle" src="images/05.jpg"alt="05.jpg image"title="click to zoom">
+</a>
+
+<a href="06.html">
+<img class="picstyle" src="images/06.jpg"alt="06.jpg image"title="click to zoom">
+</a>
+
+
+
+
+</main>
+</body>
+</html>
+
+
