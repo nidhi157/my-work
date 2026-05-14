@@ -8,14 +8,12 @@
 <title>Responsive Registration Form</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
-
 body{
 background:#0f172a;
 display:flex;
@@ -24,7 +22,6 @@ align-items:center;
 min-height:100vh;
 padding:20px;
 }
-
 .form-container{
 width:100%;
 max-width:550px;
@@ -33,39 +30,33 @@ padding:35px;
 border-radius:20px;
 box-shadow:0 0 30px rgba(0,0,0,0.4);
 }
-
 .form-container h1{
 color:white;
 text-align:center;
 margin-bottom:10px;
 font-size:34px;
 }
-
 .form-container p{
 color:#94a3b8;
 text-align:center;
 margin-bottom:25px;
 font-size:14px;
 }
-
 .row{
 display:flex;
 gap:15px;
 }
-
 .input-box{
 width:100%;
 display:flex;
 flex-direction:column;
 margin-bottom:18px;
 }
-
 .input-box label{
 color:#e2e8f0;
 margin-bottom:8px;
 font-size:15px;
 }
-
 .input-box input,
 .input-box textarea,
 .input-box select{
@@ -77,25 +68,21 @@ background:#334155;
 color:white;
 font-size:15px;
 }
-
 .input-box input:focus,
 .input-box textarea:focus,
 .input-box select:focus{
 border:2px solid #38bdf8;
 background:#1e293b;
 }
-
 textarea{
 resize:none;
 height:100px;
 }
-
 .gender-box{
 display:flex;
 gap:10px;
 flex-wrap:wrap;
 }
-
 .gender-option{
 background:#334155;
 padding:10px 14px;
@@ -103,11 +90,9 @@ border-radius:10px;
 color:white;
 cursor:pointer;
 }
-
 .gender-option input{
 margin-right:5px;
 }
-
 button{
 width:100%;
 padding:15px;
@@ -120,136 +105,96 @@ font-weight:bold;
 cursor:pointer;
 margin-top:15px;
 }
-
 button:hover{
 background:#0ea5e9;
 }
-
 .login-link{
 text-align:center;
 margin-top:18px;
 }
-
 .login-link a{
 color:#38bdf8;
 text-decoration:none;
 }
-
-/* Responsive */
-
 @media(max-width:768px){
-
 .form-container{
 padding:22px;
 }
-
 .form-container h1{
 font-size:28px;
 }
-
 .row{
 flex-direction:column;
 gap:0;
 }
-
 .gender-option{
 width:100%;
 text-align:center;
 }
-
 .input-box input,
 .input-box textarea,
 .input-box select{
 padding:12px;
 font-size:14px;
 }
-
 button{
 font-size:16px;
 padding:13px;
 }
-
 }
-
 </style>
 </head>
-
 <body>
-
 <div class="form-container">
-
 <h1>Registration Form</h1>
 <p>Create your account by filling details</p>
-
 <form>
-
 <div class="row">
-
 <div class="input-box">
 <label>First Name</label>
 <input type="text" placeholder="Enter first name">
 </div>
-
 <div class="input-box">
 <label>Last Name</label>
 <input type="text" placeholder="Enter last name">
 </div>
-
 </div>
-
 <div class="input-box">
 <label>Email Address</label>
 <input type="email" placeholder="Enter your email">
 </div>
-
 <div class="row">
-
 <div class="input-box">
 <label>Phone Number</label>
 <input type="tel" placeholder="Enter phone number">
 </div>
-
 <div class="input-box">
 <label>Date of Birth</label>
 <input type="date">
 </div>
-
 </div>
-
 <div class="input-box">
 <label>Password</label>
 <input type="password" placeholder="Create password">
 </div>
-
 <div class="input-box">
 <label>Gender</label>
-
 <div class="gender-box">
-
 <label class="gender-option">
 <input type="radio" name="gender"> Male
 </label>
-
 <label class="gender-option">
 <input type="radio" name="gender"> Female
 </label>
-
 <label class="gender-option">
 <input type="radio" name="gender"> Other
 </label>
-
 </div>
-
 </div>
-
 <div class="row">
-
 <div class="input-box">
-
 <label>Country</label>
-
 <input list="country-list" placeholder="Search country">
-
 <datalist id="country-list">
 <option value="India">
 <option value="United States">
@@ -262,25 +207,18 @@ padding:13px;
 <option value="China">
 <option value="Italy">
 </datalist>
-
 </div>
-
 <div class="input-box">
 <label>City</label>
 <input type="text" placeholder="Enter city">
 </div>
-
 </div>
-
 <div class="input-box">
 <label>Address</label>
 <textarea placeholder="Enter address"></textarea>
 </div>
-
 <div class="input-box">
-
 <label>Select Interest</label>
-
 <select>
 <option>Select Option</option>
 <option>Gaming</option>
@@ -289,23 +227,16 @@ padding:13px;
 <option>Music</option>
 <option>Sports</option>
 </select>
-
 </div>
-
 <div class="input-box">
 <label>Upload File</label>
 <input type="file">
 </div>
-
 <button type="submit">Register Now</button>
-
 <div class="login-link">
 <a href="#">Already have account? Login</a>
 </div>
-
 </form>
-
 </div>
-
 </body>
 </html>
