@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>document</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#111;
+}
+
+header{
+background:linear-gradient(#0072ff);
+color:white;
+font-size:40px;
+text-align:center;
+padding:15px;
+font-style:italic;
+font-weight:900;
+letter-spacing:2px;
+}
+
+main{
+height:600px;
+width:600px;
+border-radius:50%;
+overflow:hidden;
+margin:auto;
+margin-top:60px;
+
+//background:linear-gradient(blue,green,yellow,orange,red);
+//background:linear-gradient(to bottom,red,orange,yellow,green,blue);
+//background-image:repeating-linear-gradient(180deg,red,yellow 5%,green 12%);
+height:600px;
+//background-image:radial-gradient(red,yellow,green);height:600px;
+//background-image:radial-gradient(red 10%,yellow 20%,green 30%);height:600px;
+//background-image:repeating-radial-gradient(red, yellow 10%, green 15%);
+//background-image:conic-gradient(blue 25deg,orange,yellow,red,green,cyan);
+background-image:repeating-conic-gradient(red 0deg 20deg,yellow 20deg 40deg,lime 40deg 60deg,lime 40deg 60deg,blue 80deg 100deg,magenta 100deg 120deg
+);      
+        
+animation:spinColors 4s linear infinite;
+    
+}
+
+@keyframes spinColors{
+from{
+transform:rotate(0deg);
+ }
+to{
+transform:rotate(360deg);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Using Gradient in HTML
+</header>
+
+<main></main>
+
+</body>
+</html>
