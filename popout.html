@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+<title>Document</title>
+</head>
+<style>
+.box
+{
+width:30%;
+height:160px;
+border:1px black solid;
+box-shadow:10px 10px 10px gray;
+border-radius:10px;
+transition:2s;
+text-align:center;
+
+}
+</style>
+<body>
+<script>
+var d = document.createElement("div")
+document.body.appendChild(d)
+d.className="box"
+d.innerHTML="<div id='cross' style='cursor:pointer;text-align:right;padding-right:7px;font-size:10px;' onclick='document.body.removeChild(d)'>❌</div>"
+d.innerHTML+="Flipkart"
+d.innerHTML+="<hr/>"
+d.innerHTML+="<img style='width:96%;height:100px;margin:2px;'src='images/p1.jpg'>"
+document.title ="Ready"
+
+
+
+
+
+</script>
+</body>
+</html>
