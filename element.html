@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<style>
+.mystyle
+{
+color: red;
+font-size:30px;
+font-family:Arial black;
+cursor: pointer;
+width:200px;
+box-shadow: 10px 10px 10px grey;
+padding:10px;
+background:yellow
+}
+</style>
+<div id="mes" class="mystyle"></div>
+<body>
+<script>
+// creating the isntance of data class
+
+var mes = document.getElementById("mes")
+
+var d = new Date()
+var today = d.getDay()
+document.title = today
+if(today==1)
+{
+mes.innerHTML = "Today is Monday"
+document.body.style.background = "yellow"
+}
+if(today==2)
+{
+mes.innerHTML = "Today is Tuesday"
+document.body.style.background = "lime"
+ }
+
+if(today==3)
+{
+mes.innerHTML = "Today is Wednesday"
+document.body.style.background = "pink"
+}
+if(today==4)
+{
+mes.innerHTML = "Today is Thursday"
+document.body.style.background = "orange"
+}
+if(today==5)
+{
+mes.innerHTML = "Today is Friday"
+document.body.style.background = "cyan"
+}
+if(today==6)
+{
+mes.innerHTML = "Today is Saturday"
+document.body.style.background = "teal"
+}
+if(today==0)
+{
+mes.innerHTML = "Today is Sunday"
+document.body.style.background = "white"
+}
+</script>
+    
+</body>
+</html>

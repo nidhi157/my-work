@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #pic
+    {
+        width:200px;
+        height:200px;
+        box-shadow: 10px 10px 10px grey;
+    }
+
+</style>
+<body>
+    <h1>Get Element In Javascript</h1>
+    <img id="pic" src="images/03.JPG">
+    
+    <h1>About Programing</h1>
+   <P>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit vel eum libero magnam quisquam ipsam pariatur cupiditate dolorem tempore nemo, amet molestiae fugit unde neque! Iste consectetur a exercitationem illo?
+        Ducimus, aspernatur dicta, aliquam harum dolores aut saepe, suscipit dolor maxime maiores tenetur eius? Tempore, sequi facere suscipit aliquid vel temporibus eos laborum! Quam dolorem quae autem maiores itaque ad.
+        Maiores praesentium dolor harum vitae unde neque voluptatibus molestiae tenetur natus non consectetur aperiam obcaecati omnis et quasi nam fuga, ducimus quod magni quo illum. Unde praesentium aperiam nam maiores?
+        Explicabo necessitatibus a doloremque impedit, sed soluta dicta, perspiciatis veniam cupiditate accusantium magnam dolorem. Facilis magnam corporis quia, est repellendus hic eos, ipsam cupiditate reprehenderit pariatur adipisci blanditiis accusamus ullam?
+        Pariatur vel eius incidunt ex blanditiis quia officia cupiditate rerum! Modi, libero rem. Expedita illo repellendus et quasi impedit unde. Quibusdam rerum excepturi porro eos voluptates! Blanditiis quo aut culpa.
+        Iure magni dolore natus consequatur officia nobis beatae reiciendis mollitia doloribus quibusdam, odio enim facilis possimus autem ipsa vitae ratione itaque aliquid, pariatur iste voluptas et, unde expedita dignissimos. Consequuntur.
+        Nobis, nesciunt ipsa delectus natus cupiditate quibusdam ducimus porro perferendis accusamus expedita, dolor totam repudiandae dignissimos quod illo optio molestias voluptatum alias quisquam nulla quas. Nihil voluptates enim cupiditate magnam?
+        Similique unde quasi, quo perferendis provident sit veniam animi enim et. Ipsa commodi quam aliquid eos optio nisi doloribus placeat hic obcaecati dolor fugit numquam veniam, cumque rerum debitis? Adipisci?
+        Voluptatum, expedita. Exercitationem, illo iure? Voluptatem tempore quae quas non adipisci culpa sunt rerum obcaecati maxime exercitationem porro, itaque mollitia ullam, recusandae labore inventore distinctio aperiam magnam molestiae ut. Ratione?
+        Ab eos temporibus aliquam, at dolores earum odio illum, quo aspernatur consectetur totam rerum ut in sint magni necessitatibus nihil commodi suscipit sapiente voluptate voluptatum? Reiciendis veritatis libero iure quia.
+    </P>
+
+      <script>
+        var p = document.getElementById("pic")
+        var h = document.getElementsByTagName("h1")
+        h[0].onmouseover = function()
+        {
+          this.style.color="red"  
+          this.style.transition="0.50s"
+          this.style.cursor="320px"
+          this.style.transform="scale(1.50)"
+        }
+
+        h[0].onmouseout = function()
+        {
+            this.style.color="black"
+            this.style.transform="scale(1)"
+            this.style.marginLeft="0px"
+        }
+
+        p.onclick = function()
+        {
+            p.src ="images/05.JPG"
+        }
+
+        document.title="ready"
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mystyle
+    {
+        color: red;
+        font-size:30px;
+        font-family:Arial black;;
+        cursor: pointer;
+        width: 200px; 
+        box-shadow:10px 10px 10px gray;
+        padding: 10px; 
+        background: yellow;
+    }
+</style>
+<div id="clock" class="mystyle"></div>
+<body>
+
+    <script>
+        // creating the instance of date class
+        var b = document.getElementById("clock")
+        var s ;
+        function run_clock()
+        {
+
+            var d = new Date()
+            b.innerHTML = d.toLocaleTimeString()
+            s = d.getSeconds()
+
+            if(s>10)
+            {
+            document.bgColor ="green"
+            }
+
+        if(s>20)
+           {
+            document.bgColor ="pink"
+           }
+        
+        if(s==40)
+           {
+            alert("hello World")
+           }
+
+        }
+
+        var t = setInterval("run_clock()",1000)
+
+
+        b.onclick = function()
+        {
+            clearInterval(t)
+        }
+
+        b.onmouseout = function()
+        {
+            var t = setInterval("run_clock()",1000)
+        }
+
+    </script> 
+    
+</body>
+</html>
