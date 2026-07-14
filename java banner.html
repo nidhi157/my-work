@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Banner</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(to right,#e3f2fd,#bbdefb,#90caf9);
+font-family:Arial, Helvetica, sans-serif;
+text-align:center;
+}
+
+header{
+width:100%;
+padding:30px 0;
+}
+
+h1{
+margin-bottom:25px;
+color:#0d47a1;
+text-shadow:1px 1px 3px rgba(0,0,0,.2);
+}
+
+#pic{
+width:90%;
+max-width:1300px;
+height:450px;
+border-radius:18px;
+object-fit:cover;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+@media(max-width:992px){
+
+#pic{
+width:95%;
+height:320px;
+}
+
+h1{
+font-size:30px;
+}
+
+}
+@media(max-width:768px){
+#pic{
+width:95%;
+height:220px;
+}
+
+h1{
+font-size:24px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body onload="show()">
+
+<header>
+
+<h1>Create Banner in JavaScript</h1>
+
+<img id="pic" src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif">
+
+</header>
+
+<script>
+
+var today=0;
+
+function show(){
+
+var p1=document.getElementById("pic");
+
+if(today<7){
+ today++;
+}
+else{
+today=0;
+}
+
+document.title="Banner : "+today;
+
+if(today==1){
+p1.src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif";
+}
+
+if(today==2){
+p1.src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif";
+}
+
+if(today==3){
+p1.src="https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif";
+}
+
+if(today==4){
+p1.src="https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif";
+}
+
+if(today==5){
+p1.src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif";
+}
+
+if(today==6){
+p1.src="https://media.giphy.com/media/5VKbvrjxpVJCM/giphy.gif";
+}
+
+if(today==0){
+p1.src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif";
+}
+
+}
+
+setInterval(show,3000);
+
+</script>
+
+</body>
+</html>

@@ -1,81 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-  <title>popout</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creating Popup in JavaScript</title>
+
 <style>
-  .box
-  {
-    width:30%;
-    height:160px;
-    border:1px black solid;
-    box-shadow:10px 10px 10px gray;
-    border-radius:10px;
-    transition:2s;
-    text-align:center;
-    position:absolute;
-    background:yellow;
-    left:110px;
-    top:3dvb;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-  }
+body{
+background:#f4f7fb;
+}
+header{
+background:#0d6efd;
+color:white;
+text-align:center;
+padding:18px;
+font-size:28px;
+font-weight:bold;
+box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+p{
+padding:20px;
+text-align:justify;
+}
+
+.box{
+width:30%;
+height:170px;
+border:1px solid #0d6efd;
+box-shadow:0 0 15px rgba(0,0,0,.3);
+border-radius:10px;
+transition:2s;
+text-align:center;
+position:absolute;
+background:white;
+left:110px;
+top:30px;
+}
+
 </style>
-<body>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus quas sapiente praesentium dolorem consequatur, fugit debitis, quidem accusantium quibusdam amet modi magni reprehenderit eos quam unde ipsa, odit reiciendis consectetur.
-  Ipsam ab accusamus sint. Temporibus cupiditate et quaerat fugit laudantium mollitia amet. Nostrum inventore maxime laboriosam beatae tempore esse veritatis facere quidem, error laborum? Incidunt neque quod culpa maxime perspiciatis.
-  Soluta illum nulla atque esse quam sint, reiciendis modi ea quos sunt maiores dolores aliquam cumque laboriosam! Cum nihil amet perferendis voluptas non ducimus enim veritatis qui. Voluptate, velit ipsa!
-  Quos similique aut explicabo enim asperiores, suscipit rem corporis provident quia? Modi facere rem corrupti ex maiores, animi blanditiis et nemo iusto fuga optio perspiciatis asperiores a voluptates minima ad!
-  Quibusdam praesentium dicta asperiores distinctio. Dolorum culpa veritatis illum praesentium quos saepe hic nobis nesciunt in, corrupti mollitia dicta veniam labore at magnam placeat! Expedita fugit nam blanditiis delectus dolorum!
-  Minima eligendi inventore libero, mollitia rerum earum cupiditate amet delectus incidunt explicabo neque, ab soluta. Aut asperiores possimus vel delectus in necessitatibus error eveniet quidem velit? Quos dignissimos ad nihil?
-  Soluta, fugit quis alias vero architecto quia, aliquam ducimus neque vel porro nam minus quidem adipisci. Accusamus minus, fuga quam dicta dolores, illo architecto ipsa eius magnam veritatis exercitationem placeat!
-  Fuga fugiat praesentium aperiam adipisci minima dolores, eius necessitatibus perferendis sapiente expedita blanditiis nihil vel vero porro, quasi, facilis optio corporis reprehenderit ipsam. Incidunt blanditiis praesentium ex omnis non ipsa!
-  Quas, ducimus ratione! Repudiandae ab voluptas expedita reiciendis nulla vitae recusandae quae quasi. Sunt temporibus omnis vel praesentium accusantium nobis, voluptate doloribus quaerat impedit libero minima consequuntur, suscipit natus veritatis?
-  Maiores, distinctio. Repellendus culpa mollitia accusamus tempora, quae nihil ipsam vitae hic dolores, fugit, pariatur cum deserunt commodi. Temporibus sequi enim veniam velit sint aut rerum corporis at, voluptatem labore?</p>
-  <script>
-var d = document.createElement("div")
+</head>
 
+<body>
+
+<header>
+Creating Popup in JavaScript
+</header>
+
+<p>
+
+JavaScript allows developers to create interactive web pages. One of the
+most common examples is a popup advertisement or notification box.
+A popup can automatically appear after a few seconds using the
+<b>setTimeout()</b> function. It is useful for displaying offers,
+important announcements, welcome messages, or product advertisements.
+
+In this example, the popup appears automatically after five seconds,
+shows an image and title, and can be closed either by clicking the close
+button or automatically after ten seconds. This demonstrates how
+JavaScript can dynamically create and remove HTML elements from a web page.
+
+</p>
+
+<script>
+
+var d = document.createElement("div");
 
 function show_add()
 {
 
+document.body.appendChild(d);
+d.className="box";
 
-document.body.appendChild(d)
-d.className="box"
+d.innerHTML="<div id='cross' style='cursor:pointer;text-align:right;padding-right:8px;font-size:14px;' onclick='document.body.removeChild(d)'>❌</div>";
 
-d.innerHTML="<div id='cross' style='cursor:pointer;text-align:right;padding-right:7px;font-size:10px;' onclick='document.body.removeChild(d)'>❌</div>"
+d.innerHTML+="<h3 style='color:#0d6efd;'>Amazon Offer</h3>";
+d.innerHTML+="<hr>";
+d.innerHTML+="<img style='width:96%;height:95px;margin:3px;border-radius:6px;' src='images/p1.jpg'>";
 
-d.innerHTML+="Amazone"
-d.innerHTML+="<hr/>"
-d.innerHTML+="<img style='width:96%;height:100px;margin:2px;'src='images/p1.jpg'>"
-document.title ="Ready"
+document.title="Ready";
 
 }
 
-var t = setTimeout("show_add()",1000*5)
-//var t = setInterval("show_add()",1000*5)
+var t=setTimeout("show_add()",1000*5);
 
-/* Closing Add Automaticall */
-
+// var t=setInterval("show_add()",1000*5);
 
 function close_add()
 {
-  document.body.removeChild(d)
+    document.body.removeChild(d);
 }
 
-var t2 = setTimeout("close_add()",10000)
-  </script>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam nisi odio veniam repudiandae obcaecati dicta consectetur id laboriosam rerum, quia ipsum porro reiciendis facere atque blanditiis. Maiores temporibus voluptate quam!
-  Inventore voluptas iusto tenetur, ad atque ex minus voluptatum repudiandae earum esse sit, ea ullam a vel, impedit quaerat. Ducimus, et ipsa recusandae atque eius voluptatem quisquam quaerat in dolorem?
-  Nobis dignissimos voluptate excepturi fugit quia nostrum! Veritatis quasi quia facilis quibusdam beatae alias eveniet temporibus dolorum? Nesciunt quo quod voluptate reprehenderit temporibus placeat perspiciatis vitae eum, numquam, nostrum hic.
-  Excepturi, sed. Corporis praesentium, nobis quidem atque voluptas iure recusandae, necessitatibus enim nemo, iste nam explicabo dicta molestias. Odit sint provident quia placeat totam commodi autem modi laborum, eum praesentium!
-  Velit necessitatibus consequuntur dicta deserunt ab beatae molestiae. Voluptatem quasi velit ipsam mollitia odit architecto incidunt ad. Iste similique, ipsam officia hic, nemo provident ducimus, nesciunt id adipisci ullam velit?
-  Natus dicta maiores provident magni vero! Accusantium blanditiis labore qui sequi voluptates natus deleniti vitae provident! Quibusdam maiores facilis eius eligendi, nostrum, nihil doloremque temporibus magnam reiciendis culpa delectus enim!
-  Quis rerum distinctio exercitationem et nobis eum tempore laboriosam amet quisquam? Accusantium eum, officiis modi aut nostrum ducimus pariatur voluptates quisquam saepe voluptatibus? Et perspiciatis unde minus cupiditate repudiandae praesentium.
-  Explicabo itaque ab sequi saepe ex excepturi totam, veritatis adipisci molestiae necessitatibus odio fugiat quos a eaque consequatur sint nemo maxime iure dolor ea repudiandae! Laudantium itaque nobis expedita ab.
-  Et autem earum maiores praesentium id, animi ea odio doloribus eius accusantium ipsam dolorum illum porro voluptas fugit minus veritatis dolores ex velit at quia? Ex explicabo repellat nemo rem.
-  Eum cupiditate odio, sunt dolorum repellendus deserunt qui eius. Perspiciatis suscipit qui, corrupti tempore molestiae, eaque aperiam quasi eligendi, odit deleniti assumenda. Vel facilis quibusdam similique quidem harum dolores? Dignissimos.
+var t2=setTimeout("close_add()",10000);
+
+</script>
+
+<p>
+
+The popup created in this program is generated dynamically using
+<b>document.createElement()</b>. The popup is inserted into the page with
+<b>appendChild()</b> and removed using <b>removeChild()</b>.
+The close button lets the user dismiss the popup manually,
+while the automatic timer removes it after ten seconds.
+
+This example is commonly used in websites for promotional offers,
+welcome messages, product advertisements, and important notifications.
+It is a simple and effective demonstration of DOM manipulation
+using JavaScript.
+
 </p>
+
 </body>
 </html>
