@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Loop in JavaScript</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Trebuchet MS', Arial, sans-serif;
+}
+
+body{
+text-align:center;
+background:#eaf4f4;
+color:#222;
+}
+
+header{
+width:100%;
+background:#008080;
+color:white;
+padding:18px;
+font-size:30px;
+font-weight:bold;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+margin-bottom:20px;
+}
+
+h1{
+margin:10px 0;
+color:#004d4d;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+Create Loop in JavaScript
+</header>
+
+<script>
+
+var n = prompt("Enter a Number to Create A Table","2")
+
+document.write("<h1>Table of "+n+"</h1>")
+
+for(var i = 1; i<=10; i++)
+{
+    document.write("<h1>"+n+" ❌ "+i+" = "+n*i+"</h1>")
+}
+
+</script>
+
+</body>
+</html>
