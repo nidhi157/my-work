@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Photo Gallery</title>
+
+<style>
+ body
+{
+margin:0;
+padding:0;
+background:linear-gradient(135deg,#eef2ff,#dbeafe,#f0f9ff);
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+margin:0;
+padding:20px;
+background:#1e3a8a;
+color:white;
+font-size:35px;
+letter-spacing:2px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.3);
+}
+.pic
+{
+width:20%;
+box-shadow:5px 5px 40px rgb(47, 221, 241);
+transition:0.50s;
+cursor:pointer;
+margin:5%;
+border-radius:10px;
+}
+.pic:hover
+ {
+ transform:scale(1.08);
+ }
+</style>
+
+
+<body>
+<h1>Loop Photo Gallery</h1>
+<script>
+
+for(var i = 1; i <= 6; i++)
+{
+
+var p = document.createElement("img");
+document.body.appendChild(p);
+
+p.src = "images/p" + i + ".jpg";
+p.className = "pic";
+}
+</script>
+
+</body>
+</html>
