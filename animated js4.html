@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+    header{
+        width:70%;
+        height:300px;
+
+
+    }
+ body{
+        background-color: lightblue;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .pic
+    {
+        position: absolute;
+        top:0px;
+        left:150px;
+        width:70%;
+        height: 300px;
+        box-shadow:10px 10px 10px gray;
+        transition:2s;
+    }
+  </style>
+
+  <body onload="anibanner()">
+    <header>
+        
+        <img class="pic" src="images/p1.jpg" id="p1">
+        <img class="pic" src="images/p2.jpg" id="p2">
+        <img class="pic" src="images/p3.jpg" id="p3">
+        <img class="pic" src="images/p4.jpg" id="p4">
+        <img class="pic" src="images/p5.jpg" id="p5">
+    </header>
+    
+    <script>
+        
+        var p1 = document.getElementById("p1")
+        var p2 = document.getElementById("p2")
+        var p3 = document.getElementById("p3")
+        var p4 = document.getElementById("p4")
+        var p5 = document.getElementById("p5")
+        var c = 0
+
+        function anibanner()
+        {
+            switch(c)
+            {
+                case 1:
+
+                p5.classList.add("animate__animated", "animate__slideOutUp")
+                p5.style.opacity = "0"
+
+                break;
+                case 2:
+
+               p4.classList.add("animate__animated", "animate__slideOutUp")
+                p4.style.opacity = "0"
+                
+                break;
+                case 3:
+
+               p3.classList.add("animate__animated", "animate__slideOutUp")
+                p3.style.opacity = "0"
+                
+                break;
+                case 4:
+
+               p2.classList.add("animate__animated", "animate__slideOutUp")
+                p2.style.opacity = "0"
+                
+                break;
+                case 5:
+
+                 break;
+                case 6:
+
+                p5.style.opacity = "1"
+
+                 p4.style.opacity = "1"
+
+                  p3.style.opacity = "1"
+
+                   p2.style.opacity = "1"
+
+
+                   p5.classList.remove("animate__animated",  "animate__slideOutUp")
+                   p4.classList.remove("animate__animated",  "animate__slideOutUp")
+                   p3.classList.remove("animate__animated",  "animate__slideOutUp")
+                   p2.classList.remove("animate__animated",  "animate__slideOutUp")
+
+
+                   break;
+            }
+
+            if(c<=5)
+            {
+                c++
+            }
+            else
+            {
+                c=1
+            }
+              
+            document.title = c
+            // recursive function
+            setTimeout("anibanner()",400)
+
+                
+
+                
+
+                
+            }
+        </script>
+    
+</body>
+</html>
+

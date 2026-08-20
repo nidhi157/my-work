@@ -2,233 +2,675 @@
 <html lang="en">
 <head>
 
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nidhi Gupta | Portfolio</title>
 
 <style>
 
+/* =========================
+   BASIC RESET
+========================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f8fafc;
-color:#1e293b;
+    background:#f8fafc;
+    color:#1e293b;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header{
-background:#0F172A;
-padding:18px 0;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    background:#0f172a;
+    padding:17px 0;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 4px 18px rgba(0,0,0,0.12);
 }
 
 nav{
-width:90%;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 nav h1{
-color:#38BDF8;
-font-size:28px;
-font-weight:700;
-letter-spacing:1px;
+    color:#38bdf8;
+
+    font-size:29px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
 }
 
 nav ul{
-list-style:none;
-display:flex;
-gap:20px;
+    list-style:none;
+
+    display:flex;
+
+    gap:8px;
 }
 
 nav ul li a{
-color:#E2E8F0;
-text-decoration:none;
-padding:8px 14px;
-border-radius:8px;
-transition:0.3s;
-font-size:15px;
-font-weight:500;
+    color:#e2e8f0;
+
+    text-decoration:none;
+
+    padding:9px 15px;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:0.3s;
 }
 
 nav ul li a:hover{
-background:#38BDF8;
-color:#000;
+    background:#38bdf8;
+
+    color:#0f172a;
 }
+
+
+/* =========================
+   PROFILE / HERO
+========================= */
 
 #profile{
-text-align:center;
-padding:100px 20px;
-background:linear-gradient(to bottom,#f8fafc,#e2e8f0);
+    min-height:620px;
+
+    padding:90px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc 0%,
+            #f1f5f9 100%
+        );
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
 }
+
+
+/* Very subtle background */
+
+#profile::before{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:#e0f2fe;
+
+    opacity:0.35;
+
+    top:-200px;
+    right:-150px;
+}
+
+
+/* Hero container */
+
+.profile-container{
+    width:100%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:75px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-image-area{
+    display:flex;
+
+    justify-content:center;
+}
+
+
+/* Simple photo frame */
+
+.image-box{
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:7px;
+
+    border:2px solid #bae6fd;
+
+    box-shadow:
+        0 12px 30px rgba(15,23,42,0.12);
+
+    transition:0.3s;
+}
+
+.image-box:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 16px 35px rgba(15,23,42,0.16);
+}
+
+
+/* Profile image */
 
 #profile img{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
-margin-bottom:25px;
-border:5px solid #38BDF8;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-transition:0.4s;
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    display:block;
 }
 
-#profile img:hover{
-transform:scale(1.05);
+
+/* =========================
+   PROFILE CONTENT
+========================= */
+
+.profile-content{
+    max-width:680px;
+}
+
+.small-title{
+    color:#0284c7;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
 }
 
 #profile h2{
-font-size:42px;
-margin-bottom:12px;
-font-weight:700;
-color:#0F172A;
+    color:#0f172a;
+
+    font-size:54px;
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+    font-weight:800;
 }
+
+#profile h2 span{
+    color:#0284c7;
+}
+
+
+/* Role */
 
 .role{
-color:#38BDF8;
-margin-bottom:20px;
-font-size:20px;
-font-weight:600;
-letter-spacing:0.5px;
+    display:inline-block;
+
+    color:#0369a1;
+
+    background:#e0f2fe;
+
+    padding:8px 16px;
+
+    border-radius:7px;
+
+    border-left:3px solid #38bdf8;
+
+    margin-bottom:23px;
+
+    font-size:17px;
+
+    font-weight:600;
 }
 
+
+/* Description */
+
 #profile p{
-max-width:750px;
-margin:auto;
-line-height:1.9;
-color:#475569;
-font-size:17px;
+    max-width:680px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
 }
 
 #profile mark{
-background:#38BDF8;
-padding:3px 8px;
-border-radius:5px;
+    background:transparent;
+
+    color:#334155;
+
+    font-weight:700;
 }
 
+
+/* Small line */
+
+.hero-line{
+    width:55px;
+
+    height:3px;
+
+    background:#38bdf8;
+
+    border-radius:10px;
+
+    margin-top:25px;
+}
+
+
+/* =========================
+   WORK SECTION
+========================= */
+
 #work{
-text-align:center;
-padding:80px 20px;
-background:#ffffff;
+    padding:85px 20px;
+
+    background:white;
+
+    text-align:center;
+}
+
+.work-container{
+    max-width:900px;
+
+    margin:auto;
+}
+
+.section-tag{
+    color:#0284c7;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
 }
 
 #work h2{
-font-size:36px;
-margin-bottom:20px;
-color:#0F172A;
+    color:#0f172a;
+
+    font-size:38px;
+
+    margin-bottom:15px;
 }
 
-#work p{
-max-width:600px;
-margin:auto;
-color:#64748b;
-margin-bottom:35px;
-font-size:17px;
-line-height:1.7;
+#work h2 span{
+    color:#0284c7;
 }
+
+#work > .work-container > p{
+    max-width:650px;
+
+    margin:0 auto 35px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+
+/* Work card */
+
+.work-card{
+    max-width:700px;
+
+    margin:auto;
+
+    padding:35px 30px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,0.06);
+
+    transition:0.3s;
+}
+
+.work-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 14px 32px rgba(15,23,42,0.09);
+}
+
+.work-card h3{
+    color:#0f172a;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+}
+
+.work-card p{
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+}
+
+
+/* Button */
 
 .work-btn{
-display:inline-block;
-padding:16px 34px;
-background:#38BDF8;
-color:#0F172A;
-text-decoration:none;
-border-radius:40px;
-font-weight:700;
-font-size:16px;
-transition:0.3s;
-box-shadow:0 8px 20px rgba(56,189,248,0.35);
+    display:inline-block;
+
+    padding:12px 27px;
+
+    background:#0f172a;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:0.3s;
 }
 
 .work-btn:hover{
-background:#0ea5e9;
-color:#fff;
-transform:translateY(-3px);
+    background:#38bdf8;
+
+    color:#0f172a;
+
+    transform:translateY(-2px);
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-background:#0F172A;
-color:#E2E8F0;
-padding:50px 20px;
-text-align:center;
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+    padding:55px 20px 25px;
+
+    text-align:center;
+}
+
+.footer-content{
+    max-width:850px;
+
+    margin:auto;
 }
 
 .footer-content h3{
-margin-bottom:10px;
-font-size:26px;
+    color:white;
+
+    font-size:27px;
+
+    margin-bottom:8px;
 }
 
 .footer-content p{
-margin-bottom:20px;
-color:#94a3b8;
-font-size:15px;
+    color:#94a3b8;
+
+    font-size:14px;
+
+    margin-bottom:25px;
 }
 
+
+/* Social links */
+
 .social-links{
-margin:25px 0;
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:30px;
 }
 
 .social-links a{
-margin:0 12px;
-text-decoration:none;
-color:#E2E8F0;
-font-weight:500;
-transition:0.3s;
-font-size:15px;
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    border:1px solid #334155;
+
+    padding:9px 17px;
+
+    border-radius:7px;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    transition:0.3s;
 }
 
 .social-links a:hover{
-color:#38BDF8;
+    background:#38bdf8;
+
+    border-color:#38bdf8;
+
+    color:#0f172a;
 }
+
+
+/* Copyright */
 
 .copyright{
-font-size:14px;
-margin-top:20px;
-color:#64748b;
+    border-top:1px solid #1e293b;
+
+    padding-top:20px;
+
+    color:#64748b;
+
+    font-size:13px;
 }
 
-@media(max-width:768px){
 
-nav{
-flex-direction:column;
-gap:15px;
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    nav{
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+
+    #profile{
+        padding:75px 20px;
+
+        text-align:center;
+    }
+
+    .profile-container{
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .profile-content{
+        margin:auto;
+    }
+
+    .image-box{
+        width:250px;
+        height:250px;
+    }
+
+    #profile h2{
+        font-size:43px;
+    }
+
+    .hero-line{
+        margin:25px auto 0;
+    }
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
+
+@media(max-width:600px){
+
+    nav h1{
+        font-size:26px;
+    }
+
+    nav ul{
+        gap:3px;
+    }
+
+    nav ul li a{
+        padding:8px 10px;
+
+        font-size:12px;
+    }
+
+
+    #profile{
+        padding:60px 20px 70px;
+    }
+
+    .image-box{
+        width:220px;
+        height:220px;
+    }
+
+    #profile h2{
+        font-size:36px;
+    }
+
+    .small-title{
+        font-size:11px;
+
+        letter-spacing:1.5px;
+    }
+
+    .role{
+        font-size:14px;
+
+        padding:7px 12px;
+    }
+
+    #profile p{
+        font-size:15px;
+
+        line-height:1.8;
+    }
+
+
+    #work{
+        padding:65px 20px;
+    }
+
+    #work h2{
+        font-size:32px;
+    }
+
+    .work-card{
+        padding:30px 20px;
+    }
+
+
+    .footer-content h3{
+        font-size:24px;
+    }
+
+    .social-links a{
+        padding:8px 13px;
+
+        font-size:12px;
+    }
+
 }
 
-#profile h2{
-font-size:32px;
-}
-
-.role{
-font-size:18px;
-}
-
-#profile p{
-font-size:15px;
-}
-
-#work h2{
-font-size:30px;
-}
-
-}
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -237,63 +679,175 @@ font-size:30px;
 <h1>Nidhi</h1>
 
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="my project.html">Projects</a></li>
-<li><a href="https://www.behance.net/nidhigupta95">Behance</a></li>
-<li><a href="soft.html">Practice Page</a></li>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="my project.html">Projects</a>
+</li>
+
+<li>
+<a href="https://www.behance.net/nidhigupta95">
+Behance
+</a>
+</li>
+
+<li>
+<a href="soft.html">
+Practice Page
+</a>
+</li>
+
 </ul>
 
 </nav>
 
 </header>
 
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
 <section id="profile">
 
-<img src="images/me1.jpeg" alt="Profile">
+<div class="profile-container">
 
-<h2>Nidhi Gupta</h2>
+
+<div class="profile-image-area">
+
+<div class="image-box">
+
+<img src="images/me1.jpeg" alt="Nidhi Gupta">
+
+</div>
+
+</div>
+
+
+<div class="profile-content">
+
+<div class="small-title">
+WELCOME TO MY PORTFOLIO
+</div>
+
+<h2>
+Nidhi <span>Gupta</span>
+</h2>
 
 <div class="role">
 UI/UX Designer & Motion Graphics Artist
 </div>
 
 <p>
-I’m a <mark>creative designer focused on building clean, modern, and engaging digital experiences.</mark> 
+
+I’m a
+
+<mark>
+creative designer focused on building clean, modern, and engaging digital experiences.
+</mark>
+
 I specialize in UI/UX design and motion graphics, helping brands communicate their ideas visually.
-My approach combines creativity with simplicity — creating designs that are visually appealing, 
-easy to understand, and user-friendly. I enjoy transforming ideas into impactful visuals 
+
+My approach combines creativity with simplicity — creating designs that are visually appealing,
+
+easy to understand, and user-friendly.
+
+I enjoy transforming ideas into impactful visuals
+
 that leave a strong impression.
+
 </p>
+
+<div class="hero-line"></div>
+
+</div>
+
+</div>
 
 </section>
 
+
+
+<!-- =========================
+     WORK
+========================= -->
+
 <section id="work">
 
-<h2>My Work</h2>
+<div class="work-container">
+
+<div class="section-tag">
+MY PORTFOLIO
+</div>
+
+<h2>
+My <span>Work</span>
+</h2>
 
 <p>
 Explore my latest UI/UX projects, motion graphics, and creative design work crafted with passion and precision.
 </p>
 
+
+<div class="work-card">
+
+<h3>
+Creative Projects
+</h3>
+
+<p>
+Explore my creative work, UI/UX designs and motion graphics projects.
+</p>
+
+<a href="my project.html" class="work-btn">
+View My Projects
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="footer-content">
 
-<h3>Nidhi Gupta</h3>
+<h3>
+Nidhi Gupta
+</h3>
 
-<p>UI/UX Designer • Motion Graphics Designer</p>
+<p>
+UI/UX Designer • Motion Graphics Designer
+</p>
 
 <div class="social-links">
 
-<a href="https://instagram.com/">Instagram</a>
+<a href="https://instagram.com/">
+Instagram
+</a>
 
-<a href="https://facebook.com/">Facebook</a>
+<a href="https://facebook.com/">
+Facebook
+</a>
 
-<a href="https://linkedin.com/">LinkedIn</a>
+<a href="https://linkedin.com/">
+LinkedIn
+</a>
 
-<a href="https://twitter.com/">Twitter</a>
+<a href="https://twitter.com/">
+Twitter
+</a>
 
 </div>
 
@@ -304,6 +858,7 @@ Explore my latest UI/UX projects, motion graphics, and creative design work craf
 </div>
 
 </footer>
+
 
 </body>
 </html>
