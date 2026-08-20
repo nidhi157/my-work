@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Banner</title>
+</head>
+
+<style>
+
+    body{
+        background-color: lightblue;
+        margin: 0;
+        padding: 0;
+    }
+
+    header{
+        width: 70%;
+        height: 400px;
+        margin: 30px auto;
+        text-align: center;
+        position: relative;
+    }
+
+    h1{
+        background-color: white;
+        padding: 15px;
+        margin: 0 0 20px 0;
+        font-family: Arial, sans-serif;
+        box-shadow: 5px 5px 10px gray;
+    }
+
+    .banner{
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+
+    .pic
+    {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:300px;
+        box-shadow: 10px 10px 10px gray;
+        transition:2s;
+    }
+
+</style>
+
+<body onload="anibanner()">
+
+    <header>
+
+        <h1>Animated Banner</h1>
+
+        <div class="banner">
+
+            <img class="pic" src="images/p1.jpg" id="p1">
+            <img class="pic" src="images/p2.jpg" id="p2">
+            <img class="pic" src="images/p3.jpg" id="p3">
+            <img class="pic" src="images/p4.jpg" id="p4">
+            <img class="pic" src="images/p5.jpg" id="p5">
+
+        </div>
+
+    </header>
+
+    <script>
+
+        var p1 = document.getElementById("p1")
+        var p2 = document.getElementById("p2")
+        var p3 = document.getElementById("p3")
+        var p4 = document.getElementById("p4")
+        var p5 = document.getElementById("p5")
+        var c = 0
+
+        function anibanner()
+        {
+            switch(c)
+            {
+                case 1:
+                p5.style.opacity = "0"
+
+                break;
+
+                case 2:
+                p4.style.opacity = "0"
+
+                break;
+
+                case 3:
+                p3.style.opacity = "0"
+
+                break;
+
+                case 4:
+                p2.style.opacity = "0"
+
+                break;
+
+                case 5:
+                p1.style.opacity = "0"
+
+                break;
+
+                case 6:
+                p1.style.opacity ="1";
+                p2.style.opacity ="1";
+                p3.style.opacity ="1";
+                p4.style.opacity ="1";
+                p5.style.opacity ="1";
+
+                break;
+
+            }
+
+            if(c<=6)
+            {
+                c++
+            }
+            else
+            {
+                c=1
+            }
+
+            document.title = c
+
+            //recursive function
+            setTimeout("anibanner()",1000)
+
+        }
+
+    </script>
+
+</body>
+</html>
