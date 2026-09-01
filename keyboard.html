@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--
+    <h1>keyboard Event in js</h1>
+    <h2>ASCII</h2>
+    --> 
+
+<img id="p2" src = "images/p2.jpg">  
+
+    <img id="bird" src = "images/bird1.gif">
+    
+<style>
+  body
+  {
+    margin-top:0px;
+    margin-left:0px;
+    overflow:hidden;
+  }
+#bird
+{
+    width:20%;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+
+#p2
+{
+position:absolute;
+left:0px;
+top:0px;
+
+
+}
+
+</style>
+
+<script>
+    var bird = document.getElementById("bird")
+    var L = 0
+    var t = 0
+    var r = 0
+    var b1 =0
+    function p2(e)
+    {
+        var a = e.key
+        switch(a)
+        {
+            case "ArrowRight":
+                document.title  = L
+
+            L=L+10
+            bird.style.left = L+"px"
+
+            if(L>window.innerwidth-200)
+        {
+            //L = -200
+        }
+        bird.style.transform = "rotate(0deg)"
+        //if(L>=700)
+        //{
+        b1 = b1-10
+        p2.style.left = b1+"px"
+        //}
+
+        break;
+
+        case "ArrowLeft":
+        
+        if(L>= -200)
+
+        {
+            L=L-10
+
+        }
+
+        else{
+            L=window.innerWidth-200
+        }
+        bird.style.left = L+"Px"
+        document.title = L
+        bird.style.transform = "rotateY(180deg)"
+        break;
+
+        case "ArrowDown":
+            bird.style.transform = "rotate(68deg)" 
+            if(t<window.innerHeight-100)
+
+            {
+                t=t+10
+                r=r+10
+            }
+            else
+            {
+                t= -100
+            }
+
+            bird.style.top = t+"px"
+            bird.style.left = t+"px"
+
+            break;
+
+            case "ArrowUp":
+                bird.style.transform = "rotate(-30deg)"
+                if(t>0)
+
+                {
+                    t=t-10
+                    L+=10
+                }
+                else{
+                    t= -100
+                }
+
+                bird.style.top = t+"px"
+                bird.style.left = L+"px"
+
+                break
+            }
+
+
+
+        
+        
+    }
+    document.addEventListener("keydown",p2)
+</script>
+
+
+</body>
+</html>
