@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mystyle
+    {
+        padding: 10px;
+        box-shadow: 5px 5px 5px gray;
+        width:3%;
+        border-radius: 100px;
+        display: inline;
+        margin: 7px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+</style>
+<body>
+   
+    <script>
+        var counter = 1
+        var r,g,b,c
+
+        const clist = []
+        for(var i = 1;i<=100;i++)
+    {
+        r = Math.round(Math.random()*255)
+        g = Math.round(Math.random()*255)
+        b = Math.round(Math.random()*255)
+        c =`rgb(${r},${g},${b})`
+
+        clist[i]=c
+        document.write("<h1 onclick='setbackground(this)' class='mystyle' style='background:"+c+"'>"+i+"</h1>")
+        if(counter<=9)
+    {
+        counter++
+    }
+    else
+    {
+        document.write("<br/><br/><br/>")
+        counter=1
+    }
+
+    }
+    function setbackground(t)
+    { 
+        
+        document.body.style.background =t.style.background
+    }
+    </script>
+</body>
+</html>
