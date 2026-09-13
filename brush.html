@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="color">
+    <canvas id="mycan"></canvas>
+
+
+    <script>
+        var mycan = document.getElementById("mycan")
+        var w = window.innerWidth
+        var h = window.innerHeight
+        var s = 10
+        var x = 30
+        var y = 30
+        var drawmode = false
+        mycan.width= w
+        mycan.height = h
+
+        var c = mycan.getContext("2d");
+        c.fillStyle="red"
+
+        function draw(e)
+        {
+            x = e.pageX
+            y = e.pageY
+
+            c.beginPath();
+            if(drawmode)
+        {
+            c.arc(x,y,s,0,2 * Math.PI);
+        }
+        c.fill()
+
+        //document.title = "x ="+e.pageX+" y = "e.pageY
+
+        
+
+        }
+
+        function setdrawmode()
+        {
+            if(!drawmode)
+        {
+            drawmode=true
+        }
+        else
+        {
+            drawmode=false
+        }
+        document.title = drawmode
+        }
+
+        function f1(e)
+        {
+            if((e.key == "+")&&(s<50))
+        {
+            s+=2
+        }
+        if((e.key == "-")&&(s>5))
+        {
+            s-=2
+        }
+        if(e.key=="")
+        {
+            c.clearRect(0,0,w,h)
+        }
+
+        document.title = s
+        }
+
+        document.title ="no error"
+
+        mycan.addEventListener("mousemove",draw)
+        mycan.addEventListener("mousedown",setdrawmode)
+        document.addEventListener("keydown",f1)
+    </script>
+</body>
+</html>
