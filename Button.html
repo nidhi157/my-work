@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap Buttons</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<style>
+
+:root
+{
+    --mycolor:rgb(104, 44, 200);
+}
+
+body
+{
+    background-color:#f3f0ff;
+}
+
+header
+{
+    background-color:rgb(104, 44, 200);
+    color:white;
+    padding:20px;
+    margin-bottom:30px;
+}
+
+header h2
+{
+    margin:0;
+    text-align:center;
+}
+
+.mybutton
+{
+    background:var(--mycolor);
+    color:white;
+}
+
+</style>
+
+
+<header>
+    <h2>Bootstrap Button Examples</h2>
+</header>
+
+
+<div class="container">
+
+    <h1>Bootstrap Button</h1>
+
+    <button class="btn btn-success">Home</button>
+    <button class="btn btn-danger">Product</button>
+    <button class="btn btn-warning">Services</button>
+    <button class="btn btn-light">About</button>
+    <button class="btn btn-primary">Data</button>
+    <button class="btn btn-info">Info</button>
+
+    <br/><br/>
+
+    <button type="button" class="btn btn-link btn-secondary">Google</button>
+
+    <br/><br/>
+
+    <input type="button" value="Save">
+
+    <br/><br/>
+
+    <a class="btn btn-success" href="http://yahoo.com" role="button">
+        Open Yahoo
+    </a>
+
+    <br/><br/>
+
+    <a class="btn btn-outline-success">Home</a>
+    <a class="btn btn-outline-danger">Product</a>
+    <a class="btn btn-outline-warning">Services</a>
+    <a class="btn btn-outline-light">About</a>
+    <a class="btn btn-outline-primary">Data</a>
+    <a class="btn btn-outline-info">Info</a>
+
+    <br/><br/>
+
+    <button class="btn btn-success btn-lg">Home</button>
+    <button class="btn btn-success btn-sm">Home</button>
+
+    <br/><br/>
+
+    <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .125rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .85rem;">
+        Custom Button
+    </button>
+
+    <button class="btn mybutton">My Button</button>
+
+    <br/><br/>
+
+    <div class="d-grid gap-1">
+        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Button</button>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVFcXxK/BmnVDxM+D2scQbITx"
+    crossorigin="anonymous">
+</script>
+
+</body>
+
+</html>
+
